@@ -1,35 +1,68 @@
-# Sistema de Estoque para Padaria
+# Inventory Management System
 
-Sistema desenvolvido em Python para controlar produtos e movimentações de estoque de uma padaria.
+A modular command-line inventory management application built with Python for small businesses. The system provides essential product and stock control features through a simple and reliable interface.
 
-## Funcionalidades
+## Features
 
-- Cadastro de produtos
-- Listagem de produtos
-- Alteração de preços
-- Exclusão com confirmação
-- Entrada de mercadorias
-- Saída de mercadorias
-- Alerta de estoque baixo
-- Armazenamento em arquivo CSV
-- Validação dos dados digitados
+* Product registration
+* Product listing
+* Price updates
+* Product deletion with confirmation
+* Stock entry and withdrawal
+* Low-stock alerts
+* Input validation and error handling
+* Persistent CSV data storage
+* Automatic data-file creation
 
-## Tecnologias utilizadas
+## Technologies
 
-- Python
-- CSV
-- Git
+* Python
+* CSV
+* Git
+* GitHub
 
-## Como executar
+## Project Structure
 
-Abra o terminal na pasta do projeto e execute `python main.py`.
+* `main.py` — application menu and user interaction
+* `sistema_produtos.py` — inventory rules, validation and file operations
+* `produtos.csv` — automatically generated local data storage
 
-## Arquivos do projeto
+## Getting Started
 
-- `main.py`: contém o menu do sistema.
-- `sistema_produtos.py`: contém as funções do estoque.
-- `produtos.csv`: armazena os produtos cadastrados.
+Clone the repository:
 
-## Autor
+`git clone https://github.com/Lucas-LBR/inventory-management-system.git`
 
-Lucas Nascimento
+Enter the project directory:
+
+`cd inventory-management-system`
+
+Run the application:
+
+`python main.py`
+
+No external libraries are required.
+
+## Concepts Demonstrated
+
+* CRUD operations
+* Functions and modular programming
+* Lists and dictionaries
+* Loops and conditional logic
+* Exception handling
+* File reading and writing
+* CSV data persistence
+* Git version control
+
+## Future Improvements
+
+* Stock movement history
+* Product search and filtering
+* SQLite database integration
+* Graphical user interface
+* Inventory reports
+* User authentication
+
+## Author
+
+Developed by [Lucas-LBR](https://github.com/Lucas-LBR).
