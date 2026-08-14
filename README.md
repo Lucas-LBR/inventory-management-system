@@ -16,7 +16,7 @@ A modular command-line inventory management application built with Python for sm
 * Input validation and error handling
 * Persistent CSV data storage
 * Automatic data-file creation
-
+- Automated unit tests with Python `unittest`
 ## Technologies
 
 * Python
@@ -56,7 +56,13 @@ No external libraries are required.
 * File reading and writing
 * CSV data persistence
 * Git version control
+## Running Tests
 
+Run the complete automated test suite with:
+
+`python -m unittest -v`
+
+The tests use temporary CSV files and do not modify the application's real inventory data.
 ## Future Improvements
 
 * Stock movement history
