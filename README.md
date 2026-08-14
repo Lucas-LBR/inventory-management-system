@@ -1,6 +1,9 @@
 # Inventory Management System
 
 A modular command-line inventory management application built with Python for small businesses. The system provides essential product and stock control features through a simple and reliable interface.
+## Demo
+
+![Inventory Management System CLI demo](assets/inventory-management-demo.png)
 
 ## Features
 
@@ -24,8 +27,8 @@ A modular command-line inventory management application built with Python for sm
 ## Project Structure
 
 * `main.py` — application menu and user interaction
-* `sistema_produtos.py` — inventory rules, validation and file operations
-* `produtos.csv` — automatically generated local data storage
+* `system_products.py` — inventory rules, validation and file operations
+* `products.csv` — automatically generated local data storage
 
 ## Getting Started
 

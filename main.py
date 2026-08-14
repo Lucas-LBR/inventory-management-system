@@ -1,85 +1,85 @@
-from sistema_produtos import (
-    inicializar_arquivo,
-    criar_produto_do_teclado,
-    adicionar_produto_csv,
-    exibir_produtos,
-    alterar_preco_csv,
-    excluir_produto_csv,
-    exibir_estoque_baixo,
-    movimentar_estoque,
-    ler_nome
+from system_products import (
+    initialize_file,
+    create_product_from_keyboard,
+    add_product_csv,
+    display_products,
+    change_price_csv,
+    delete_product_csv,
+    display_low_stock,
+    move_inventory,
+    read_name
 )
 
 
-def mostrar_menu():
-    print("\n=== SISTEMA DE ESTOQUE ===")
-    print("1 - Cadastrar produto")
-    print("2 - Listar produtos")
-    print("3 - Alterar preço")
-    print("4 - Excluir produto")
-    print("5 - Ver estoque baixo")
-    print("6 - Registrar entrada ou saída")
-    print("7 - Sair")
+def show_menu():
+    print("\n=== INVENTORY SYSTEM ===")
+    print("1 - Register product")
+    print("2 - List products")
+    print("3 - Change price")
+    print("4 - Delete product")
+    print("5 - View low stock")
+    print("6 - Register entry or exit")
+    print("7 - Exit")
 
-    return input("\nEscolha uma opção: ").strip()
+    return input("\nChoose an option: ").strip()
 
 
 def main():
-    inicializar_arquivo()
+    initialize_file()
 
     while True:
-        opcao = mostrar_menu()
+        option = show_menu()
 
-        if opcao == "1":
-            produto = criar_produto_do_teclado()
-            adicionar_produto_csv(produto)
+        if option == "1":
+            product = create_product_from_keyboard()
+            add_product_csv(product)
 
-        elif opcao == "2":
-            exibir_produtos()
+        elif option == "2":
+            display_products()
 
-        elif opcao == "3":
-            nome = ler_nome(
-                "\nQual produto deseja alterar? "
+        elif option == "3":
+            name = read_name(
+                "\nWhich product do you want to change? "
             )
-            alterar_preco_csv(nome)
+            change_price_csv(name)
 
-        elif opcao == "4":
-            nome = ler_nome(
-                "\nQual produto deseja excluir? "
+        elif option == "4":
+            name = read_name(
+                "\nWhich product do you want to delete? "
             )
 
-            confirmacao = input(
-                f"Confirma a exclusão de '{nome}'? (s/n): "
+            confirmation = input(
+                f"Confirm deletion of '{name}'? (y/n): "
             ).strip().lower()
 
-            if confirmacao == "s":
-                excluir_produto_csv(nome)
+            if confirmation == "y":
+                delete_product_csv(name)
             else:
-                print("Exclusão cancelada.")
+                print("Deletion cancelled.")
 
-        elif opcao == "5":
-            exibir_estoque_baixo()
+        elif option == "5":
+            display_low_stock()
 
-        elif opcao == "6":
-            nome = ler_nome(
-                "\nQual produto deseja movimentar? "
+        elif option == "6":
+            name = read_name(
+                "\nWhich product do you want to move? "
             )
 
-            operacao = input(
-                "Digite E para entrada ou S para saída: "
+            operation = input(
+                "Type E for entry or S for exit: "
             ).strip().lower()
 
-            movimentar_estoque(
-                nome,
-                operacao
+            move_inventory(
+                name,
+                operation
             )
 
-        elif opcao == "7":
-            print("Programa encerrado.")
+        elif option == "7":
+            print("Program ended.")
             break
 
         else:
-            print("Opção inválida. Escolha de 1 a 7.")
+            print("Invalid option. Choose from 1 to 7.")
 
 
 if __name__ == "__main__":
