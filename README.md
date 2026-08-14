@@ -1,5 +1,7 @@
 # Inventory Management System
 
+[![Python Tests](https://github.com/Lucas-LBR/inventory-management-system/actions/workflows/tests.yml/badge.svg)](https://github.com/Lucas-LBR/inventory-management-system/actions/workflows/tests.yml)
+
 A modular command-line inventory management application built with Python for small businesses. The system provides essential product and stock control features through a simple and reliable interface.
 ## Demo
 
